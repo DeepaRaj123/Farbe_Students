@@ -1,0 +1,104 @@
+.banner {
+  padding: 10px;
+  background-color: #2F3FB0;
+  color: white;
+  display: flex;
+  height:70px;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.tips {
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: gray;
+}
+
+.join-info-text {
+  margin-bottom: 2px;
+}
+
+
+.player {
+  width: 100%;
+  height: 81%;
+}
+
+.player-name {
+  margin: 8px 0;
+}
+
+@media (max-width: 100%) {
+  .player {
+    width: 100%;
+    height: 81%;
+  }
+}
+
+.btn-live {
+  background-color: #2F3FB0;
+  color: white;
+  border: 1px solid #2F3FB0;
+}
+
+.btn-live:hover {
+  color: #2F3FB0;
+  background-color: white;
+  border: 1px solid #2F3FB0;
+}
+.player{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 70px;
+ 
+}
+.player{
+  border-style: solid;
+  border-color: green; 
+  border-bottom: transparent;
+  background-color: black;
+  opacity: .9;
+}
+
+.player>.micclass{
+  background-color: white;
+  color: #fff;
+  opacity: 1;
+  height: 70px;
+  position: absolute;
+  top: 100%;
+  width: 100.35%;
+  margin-left: -2.8px;
+  padding-left:32%;
+  bottom: 0;
+  align-items: center;
+  border-style: solid;
+  border-color: green; 
+  border-top: transparent;
+}
+
+.button-group{
+ padding-left: 1px;
+}
+
+.upcomingclasstext{
+  display:flex;
+  flex-direction: row;
+}
+.upcomingclasstext p {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+
+}
+.date {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.signout{
+  background-image: url(/asses/img/logout.png);
+}

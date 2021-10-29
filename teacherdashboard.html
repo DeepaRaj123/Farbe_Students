@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="teacher.css" rel ='stylesheet">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Farbe</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="video.html">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Teachers</span>
+          </a>
+        </li>
+        <li>
+          <a href="students.html">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Students</span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="groups.html">
+            <i class='bx bx-heart' ></i>
+            <span class="links_name">Groups</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Posters</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">Webinar Booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="classbooking.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Class Booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-message' ></i>
+            <span class="links_name">Recorded Classes</span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="#">
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Settings</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name">Admin</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Teachers</div>
+            <div class="number">40,876</div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <span class="text">Up from yesterday</span>
+            </div>
+          </div>
+          <i class='bx bx-cart-alt cart'></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Classes</div>
+            <div class="number">38,876</div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <span class="text">Up from yesterday</span>
+            </div>
+          </div>
+          <i class='bx bxs-cart-add cart two' ></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Students</div>
+            <div class="number">$12,876</div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <span class="text">Up from yesterday</span>
+            </div>
+          </div>
+          <i class='bx bx-cart cart three' ></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Courses</div>
+            <div class="number">11,086</div>
+            <div class="indicator">
+              <i class='bx bx-down-arrow-alt down'></i>
+              <span class="text">Down From Today</span>
+            </div>
+          </div>
+          <i class='bx bxs-cart-download cart four' ></i>
+        </div>
+      </div>
+
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Recent Classes</div>
+          <div class="sales-details">
+            <ul class="details">
+         
+      
+          </div>
+          <div class="button">
+            <a href="#">See All</a>
+          </div>
+        </div>
+        <div class="top-sales box">
+          <div class="title">Top Rated Classes</div>
+          <ul class="top-sales-details">
+           
+
+          </ul>
+          <ul id="myList"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use-->
+ <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+ <script>
+   // Your web app's Firebase configuration
+   var  firebaseConfig = {
+ apiKey: "AIzaSyAPUZL6sv9HLFZWwqvi0FwC7bQGHg_FB5U",
+ authDomain: "wireless-buzzer-5da2e.firebaseapp.com",
+ databaseURL: "https://wireless-buzzer-5da2e-default-rtdb.firebaseio.com",
+ projectId: "wireless-buzzer-5da2e",
+ storageBucket: "wireless-buzzer-5da2e.appspot.com",
+ messagingSenderId: "32882967911",
+ appId: "1:32882967911:web:0e58f308bbda83cbd2dbc2"
+};
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+ </script>
+  <script>
+    var teachers_data = []
+ var userDataRef = firebase.database().ref("users/teachers").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+  var key = childSnapshot.key;
+  var childData = childSnapshot.val();              
+
+  var name_val = childSnapshot.val().username;
+  teachers_data.push(name_val)
+
+  });
+  let list = document.getElementById("myList");
+teachers_data.forEach((item)=>{
+  let li = document.createElement("li");
+  li.innerText = item;
+  list.appendChild(li);
+})
+});
+
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+
+ </script>
+
+</body>
+</html>
+
