@@ -23,8 +23,8 @@ var localTrackState = {
 var remoteUsers = {};
 // Agora client options
 var options = {
-  appid: "a6af85f840ef43108491705e2315a857",
-  channel: "farbe",
+  appid: "53008f6f33b4412e89ee0888eebd0ac9",
+  channel: "SFL",
   uid: null,
   token: null,
   role: "host" // host or audience
@@ -35,8 +35,8 @@ $("#join-form").submit(async function (e) {
   e.preventDefault();
   $("#host-join").attr("disabled", true);
   try {
-    options.appid = "a6af85f840ef43108491705e2315a857";
-    options.channel = "farbe";
+    options.appid = "53008f6f33b4412e89ee0888eebd0ac9";
+    options.channel = "SFL";
     await join();
   } catch (error) {
     console.error(error);
@@ -100,7 +100,7 @@ async function join2() {
       $('#share').prop('disabled', false);
 
       try {
-        options.appid = "a6af85f840ef43108491705e2315a857";
+        options.appid = "53008f6f33b4412e89ee0888eebd0ac9";
         options.channel = $("#channel").val();
         await join();
       } catch (error) {
